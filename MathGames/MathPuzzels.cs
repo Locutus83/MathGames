@@ -166,16 +166,17 @@ namespace MathGames
                     }
                     break;
                 case ProblemType.Multiplication:
-                    // TODO: Implement When Faith is older
+                    _currentMathProblem = new MultiplicationProblem(GetDifficultyLevel());
+                    _problems.Add(_currentMathProblem);
                     break;
                 case ProblemType.Division:
-                    // TODO: Implement When Faith is older
+                    // TODO: Implement When Child is older
                     break;
                 case ProblemType.MultiplyDivide:
-                    // TODO: Implement When Faith is older
+                    // TODO: Implement When Child is older
                     break;
                 case ProblemType.All:
-                    // TODO: Implement When Faith is older
+                    // TODO: Implement When Child is older
                     break;
             }
 

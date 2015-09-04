@@ -157,23 +157,22 @@
             // rbMultiplication
             // 
             this.rbMultiplication.AutoSize = true;
+            this.rbMultiplication.Checked = true;
             this.rbMultiplication.Location = new System.Drawing.Point(7, 68);
             this.rbMultiplication.Name = "rbMultiplication";
             this.rbMultiplication.Size = new System.Drawing.Size(86, 17);
             this.rbMultiplication.TabIndex = 2;
+            this.rbMultiplication.TabStop = true;
             this.rbMultiplication.Text = "Multiplication";
             this.rbMultiplication.UseVisualStyleBackColor = true;
-            this.rbMultiplication.Visible = false;
             // 
             // rbSubtraction
             // 
             this.rbSubtraction.AutoSize = true;
-            this.rbSubtraction.Checked = true;
             this.rbSubtraction.Location = new System.Drawing.Point(7, 44);
             this.rbSubtraction.Name = "rbSubtraction";
             this.rbSubtraction.Size = new System.Drawing.Size(79, 17);
             this.rbSubtraction.TabIndex = 1;
-            this.rbSubtraction.TabStop = true;
             this.rbSubtraction.Text = "Subtraction";
             this.rbSubtraction.UseVisualStyleBackColor = true;
             // 
