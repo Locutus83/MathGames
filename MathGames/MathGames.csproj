@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdditionProblem.cs" />
+    <Compile Include="DivisionProblem.cs" />
     <Compile Include="MathPuzzels.cs">
       <SubType>Form</SubType>
     </Compile>

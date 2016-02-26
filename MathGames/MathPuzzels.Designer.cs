@@ -120,7 +120,6 @@
             this.rbMultiplyDivide.TabIndex = 6;
             this.rbMultiplyDivide.Text = "Both (* and /)";
             this.rbMultiplyDivide.UseVisualStyleBackColor = true;
-            this.rbMultiplyDivide.Visible = false;
             // 
             // rbPlusMinus
             // 
@@ -141,7 +140,6 @@
             this.rbAll.TabIndex = 4;
             this.rbAll.Text = "All";
             this.rbAll.UseVisualStyleBackColor = true;
-            this.rbAll.Visible = false;
             // 
             // rbDivision
             // 
@@ -152,7 +150,6 @@
             this.rbDivision.TabIndex = 3;
             this.rbDivision.Text = "Division";
             this.rbDivision.UseVisualStyleBackColor = true;
-            this.rbDivision.Visible = false;
             // 
             // rbMultiplication
             // 

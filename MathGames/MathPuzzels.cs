@@ -129,20 +129,6 @@ namespace MathGames
 
         private string GetNextProblem(ProblemType type)
         {
-            if (_problems.Count >= 20)
-            {
-                rbPlusMinus.Visible = rbAddition.Visible = true;
-                rbLevel3.Visible = true;
-            }
-            if (_problems.Count >= 40)
-            {
-                rbLevel4.Visible = rbSubtraction.Visible = true;
-            }
-            if (_problems.Count >= 60)
-            {
-                rbLevel5.Visible = rbSubtraction.Visible = true;
-            }
-
             switch (type)
             {
                 case ProblemType.Addition:
@@ -154,7 +140,7 @@ namespace MathGames
                     _problems.Add(_currentMathProblem);
                     break;
                 case ProblemType.AddSubtract:
-                    if (rand.Next(3) > 1)
+                    if (rand.Next(4) >= 2)
                     {
                         _currentMathProblem = new AdditionProblem(GetDifficultyLevel());
                         _problems.Add(_currentMathProblem);
@@ -170,13 +156,43 @@ namespace MathGames
                     _problems.Add(_currentMathProblem);
                     break;
                 case ProblemType.Division:
-                    // TODO: Implement When Child is older
+                    _currentMathProblem = new DivisionProblem(GetDifficultyLevel());
+                    _problems.Add(_currentMathProblem);
                     break;
                 case ProblemType.MultiplyDivide:
-                    // TODO: Implement When Child is older
+                    if (rand.Next(4) >= 2)
+                    {
+                        _currentMathProblem = new MultiplicationProblem(GetDifficultyLevel());
+                        _problems.Add(_currentMathProblem);
+                    }
+                    else
+                    {
+                        _currentMathProblem = new DivisionProblem(GetDifficultyLevel());
+                        _problems.Add(_currentMathProblem);
+                    }
                     break;
                 case ProblemType.All:
-                    // TODO: Implement When Child is older
+                    int randInt = rand.Next(8);
+                    if (randInt >= 6)
+                    {
+                        _currentMathProblem = new MultiplicationProblem(GetDifficultyLevel());
+                        _problems.Add(_currentMathProblem);
+                    }
+                    else if (randInt >= 4)
+                    {
+                        _currentMathProblem = new DivisionProblem(GetDifficultyLevel());
+                        _problems.Add(_currentMathProblem);
+                    }
+                    else if (randInt >= 2)
+                    {
+                        _currentMathProblem = new AdditionProblem(GetDifficultyLevel());
+                        _problems.Add(_currentMathProblem);
+                    }
+                    else
+                    {
+                        _currentMathProblem = new SubtractionProblem(GetDifficultyLevel());
+                        _problems.Add(_currentMathProblem);
+                    }
                     break;
             }
 

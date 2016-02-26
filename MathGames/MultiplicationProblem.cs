@@ -9,12 +9,8 @@ namespace MathGames
     {
         public MultiplicationProblem(int difficulty)
         {
-            /* 
-             * TODO: Better Define difficulty levels.
-             */
-
             // Only work on 2 numbers per day.  This will produce one of two sequential numbers between 0 and 12.
-            double first = (DateTime.Now.DayOfYear + _rand.Next(2))%13;
+            double first = (DateTime.Now.DayOfYear + _rand.Next(2*difficulty))%13;
 
             double second = _rand.Next(12);
 
